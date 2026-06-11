@@ -93,42 +93,44 @@ Necesario tener claro los siguientes temas:
 3. Crear el dockerfile del front:
 
 4. Crear el docker-compose para levantar:
-- Imagenes de pgadmin y postgresql.
-- Imagenes del backend y el frontend
+  - Imagenes de pgadmin y postgresql.
+  - Imagenes del backend y el frontend
 
 5. Hacer el build de los contenedores:
 
-6. Aujtenticarse en PgAdmin y crear la tabla "dispositivos" en la BD, con los campos "id, serial, paciente".
+6. Autenticarse en PgAdmin y crear la tabla "dispositivos" en la BD, con los campos "id, serial, paciente".
 
 7. Visualizar en el front la tabla:
 
 
 ## Resultados
 
-1. Generar un front y un back
+1. Se generó un backend con nest y un frontend con react TS. El back consulta los registros de una única tabla en la BD y el frontend muestra lo que recibe del backend. La tabla es del Proyecto PIENSA Cautelap, un sistema de alerta con pulsera para adultos mayores.
 
-2. Crear el dockerfile del back:
+2. Crear el dockerfile del back para crear una imagen con node 22 Alpine:
 
 <img src="./imagenes/E1.png">
 
-3. Crear el dockerfile del front:
+3. Crear el dockerfile del front para crear la imagen con nginx:
 
 <img src="./imagenes/E2.png">
 
-4. Crear el docker-compose para levantar:
-- Imagenes de pgadmin y postgresql.
-- Imagenes del backend y el frontend
+4. Crear el docker-compose para levantar los servicios:
+  - pgadmin
+  - postgresql
+  - backend
+  - frontend
 
 <img src="./imagenes/E3.png">
 
-5. Hacer el build de los contenedores:
+5. Hacer el build de los contenedores. Previemente se copiló el artefacto del front:
 
 <img src="./imagenes/E4.png">
 
-6. Aujtenticarse en PgAdmin y crear la tabla "dispositivos" en la BD, con los campos "id, serial, paciente".
+6. Autenticarse en PgAdmin y crear la tabla "dispositivos" en la BD, con los campos "id, serial, paciente".
 
 <img src="./imagenes/E5.png">
 
-7. Visualizar en el front la tabla:
+7. Visualizar en el front la tabla extraída de la Bd por el back:
 
-<img src="./imagenes/E1¿6.png">
+<img src="./imagenes/E6.png">
